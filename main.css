@@ -12,9 +12,9 @@ body {
     font-weight: 400;
     font-family: "Noto Sans", sans-serif;
     color: #111; 
-	background-color: #aee6ca;
+	background-color: #FFF0F5;
 	/*background-image:url(bck6.jpg);
-	background-color: #BCE8F4;
+	background-color: #BCE1F4;
 	background-repeat: no-repeat; 
     background-position: center;
     background-attachment: fixed;    */   
@@ -95,7 +95,7 @@ div#contentpane {
     clear: both;
     line-height: 150%;
     z-index: 1;
-	background: #aee6ca;
+	background: #DCDCDC;
 }
 
 @media screen and (min-width: 600px) {
