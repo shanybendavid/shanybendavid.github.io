@@ -83,7 +83,7 @@ div#headpane {
 }
 
 div#contentpane {
-    
+    border-radius: 25px;
     position:relative;
     margin-top: -10px;
     margin-left:auto;
