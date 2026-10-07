@@ -25,7 +25,9 @@ h1, h2, h3, p, figure { margin: 0; }
 h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; color: var(--ink); }
 h1 { font-size: 42px; line-height: 1.2; letter-spacing: -1px; margin-bottom: 12px; }
 .affiliation { color: var(--ink); font-size: 15px; line-height: 1.65; }
-.bio { grid-area: bio; font-size: 15px; line-height: 1.75; }
+.bio { grid-area: bio; display: grid; gap: 22px; font-size: 15px; line-height: 1.75; }
+.about-label { font-family: inherit; font-size: 11px; font-weight: 650; line-height: 1.5; letter-spacing: 1.3px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.about-group strong { font-weight: 600; color: var(--ink); }
 .bio p + p { margin-top: 14px; }
 .contact-link { font-size: 14px; font-weight: 600; text-decoration: none; }
 .contact-link span { margin-left: 8px; }
