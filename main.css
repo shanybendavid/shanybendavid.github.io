@@ -61,6 +61,7 @@ h3 a:hover { text-decoration: underline; }
 .talk-venues li + li { margin-top: 6px; }
 .talk-venues li::marker { color: var(--accent); }
 .talk-venues strong { color: var(--ink); font-weight: 600; }
+.talk-venues .epfl-talk { color: var(--ink); }
 .teaching-entry { display: grid; grid-template-columns: 150px 1fr; gap: 26px; }
 .teaching-date { font-size: 13px; color: var(--muted); }
 .teaching-entry p { font-size: 13px; margin-top: 7px; }
