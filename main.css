@@ -15,7 +15,7 @@ a:hover { color: #657753; }
 a:focus-visible { outline: 2px solid var(--ink); outline-offset: 5px; border-radius: 2px; }
 .site-shell { max-width: 1000px; padding: 0 40px; margin: auto; }
 .site-header { display: flex; align-items: center; justify-content: flex-start; padding: 22px 0; border-bottom: 1px solid var(--line); }
-nav { display: flex; gap: 30px; }
+nav { display: flex; flex-wrap: wrap; gap: 12px 30px; }
 nav a { display: inline-block; padding: 4px 0; font-size: 13px; text-decoration: none; }
 .intro { display: grid; grid-template-columns: minmax(0, 1fr) 190px; grid-template-areas: "identity portrait" "bio portrait" "contact portrait"; column-gap: 56px; row-gap: 22px; padding: 48px 0; align-items: start; }
 .identity { grid-area: identity; }
@@ -50,12 +50,17 @@ h3 a:hover { text-decoration: underline; }
 .venue { display: inline-block; padding: 3px 8px; background: var(--wash); color: #485b3e; font-size: 11px; font-weight: 600; letter-spacing: .1px; }
 .paper-link { align-self: start; margin-top: 3px; font-size: 12px; text-decoration: none; text-align: right; white-space: nowrap; }
 .paper-link span { padding-left: 5px; }
-.talk { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 26px; background: var(--wash); border-left: 3px solid var(--accent); padding: 30px; }
-.talk-date { color: var(--ink); font-size: 13px; }
-.talk-date span { display: block; font-size: 11px; color: var(--muted); margin-top: 4px; }
-.talk .eyebrow { margin-bottom: 9px; font-size: 10px; }
-.talk-body > p:not(.eyebrow) { font-size: 13px; margin: 12px 0; }
-.text-link { font-size: 12px; }
+.awards-list { list-style: none; padding: 0; margin: 0; }
+.award-entry { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 26px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.award-entry:last-child { border-bottom: none; padding-bottom: 0; }
+.award-date { font-size: 13px; color: var(--muted); }
+.award-entry p { font-size: 13px; margin-top: 5px; }
+.talk-entry { padding: 22px 0; border-bottom: 1px solid var(--line); }
+.talk-entry:last-child { border-bottom: none; padding-bottom: 0; }
+.talk-venues { margin: 10px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.75; }
+.talk-venues li + li { margin-top: 6px; }
+.talk-venues li::marker { color: var(--accent); }
+.talk-venues strong { color: var(--ink); font-weight: 600; }
 .teaching-entry { display: grid; grid-template-columns: 150px 1fr; gap: 26px; }
 .teaching-date { font-size: 13px; color: var(--muted); }
 .teaching-entry p { font-size: 13px; margin-top: 7px; }
@@ -69,7 +74,6 @@ footer a { text-decoration: none; }
   .portrait img { height: 200px; }
   h1 { font-size: 36px; }
   .eyebrow { font-size: 10px; letter-spacing: 1.2px; }
-  .talk { grid-template-columns: 145px 1fr; gap: 20px; padding: 24px; }
 }
 @media (max-width: 580px) {
   .site-shell { padding: 0 22px; }
@@ -87,8 +91,8 @@ footer a { text-decoration: none; }
   h3 { font-size: 16px; }
   .paper-link { grid-column: 2; text-align: left; margin: 0; }
   .authors { font-size: 12px; }
-  .talk { grid-template-columns: 1fr; padding: 22px; gap: 22px; }
+  .award-entry { grid-template-columns: 1fr; gap: 6px; }
   .teaching-entry { grid-template-columns: 1fr; gap: 8px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-@media print { .site-shell { max-width: none; padding: 0; } nav, .skip-link, footer { display: none; } .intro { padding-top: 20px; } .publication, .talk, .teaching-entry { break-inside: avoid; } }
+@media print { .site-shell { max-width: none; padding: 0; } nav, .skip-link, footer { display: none; } .intro { padding-top: 20px; } .publication, .talk-entry, .award-entry, .teaching-entry { break-inside: avoid; } }
